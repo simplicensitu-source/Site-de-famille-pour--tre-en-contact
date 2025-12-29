@@ -1,0 +1,149 @@
+ <!DOCTYPE html>
+ <html lang="fr">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galerie - Famille</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+     nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .gallery-container {
+      padding: 40px 20px;
+    }
+
+    .gallery-img {
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    .modal-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+<h1>Galerie de la Famille</h1>
+ <nav>
+    <a href="#">Accueil</a>
+    <a href="A proos.html">A propos</a>
+     <a href="Généalogie.html">Arbre Généalogique</a>
+    <a href="#">Galerie</a>
+    <a href="Evenement.html.html">Événements</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<div class="gallery-container container">
+  <div class="row g-4">
+    <!-- Exemple d'image -->
+    <div class="col-md-4">
+      <img src="popo.jpg" alt="popo" class="img-fluid gallery-img" onclick="openModal(this.src)" />
+    </div>
+    <div class="col-md-4">
+      <img src="gogo.jpg" alt="gogo" class="img-fluid gallery-img" onclick="openModal(this.src)" />
+    </div>
+    <div class="col-md-4">
+      <img src="nene.jpg" alt="nene" class="img-fluid gallery-img" onclick="openModal(this.src)" />
+    </div>
+     <div class="col-md-4">
+      <img src="sisi.jpg" alt="sisi" class="img-fluid gallery-img" onclick="openModal(this.src)" />
+    </div>
+     <div class="col-md-4">
+      <img src="kiki.jpg" alt="kiki" class="img-fluid gallery-img" onclick="openModal(this.src)" />
+    </div>
+     <div class="col-md-4">
+      <img src="wewe.jpg" alt="wewe" class="img-fluid gallery-img" onclick="openModal(this.src)" />
+    </div>
+     <div class="col-md-4">
+      <img src="sese.jpg" alt="sese" class="img-fluid gallery-img" onclick="openModal(this.src)" />
+    </div>
+     <div class="col-md-4">
+      <img src="soso.jpg" alt="soso" class="img-fluid gallery-img" onclick="openModal(this.src)" />
+    </div>
+     <div class="col-md-4">
+      <img src="bobo.jpg" alt="bobo" class="img-fluid gallery-img" onclick="openModal(this.src)" />
+    </div>
+     <div class="col-md-4">
+      <img src="bebe.jpg" alt="bebe" class="img-fluid gallery-img" onclick="openModal(this.src)" />
+    </div>
+     <div class="col-md-4">
+      <img src="tete.jpg" alt="tete" class="img-fluid gallery-img" onclick="openModal(this.src)" />
+    </div>
+     <div class="col-md-4">
+      <img src="lala.jpg" alt="lala" class="img-fluid gallery-img" onclick="openModal(this.src)" />
+    </div>
+     <div class="col-md-4">
+      <img src="lele.jpg" alt="lele" class="img-fluid gallery-img" onclick="openModal(this.src)" />
+    </div>
+     <div class="col-md-4">
+      <img src="dede.jpg" alt="dede" class="img-fluid gallery-img" onclick="openModal(this.src)" />
+    </div>
+     <div class="col-md-4">
+      <img src="tata.jpg" alt="tata" class="img-fluid gallery-img" onclick="openModal(this.src)" />
+    </div>
+
+
+
+    <!-- Ajoute autant d'images que tu veux -->
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark">
+      <div class="modal-body text-center">
+        <img src="" id="modalImage" class="modal-img" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; <span id="year"></span> Famille. Tous droits réservés.
+</footer>
+
+<script>
+  function openModal(src) {
+    document.getElementById("modalImage").src = src;
+    new bootstrap.Modal(document.getElementById('imageModal')).show();
+  }
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

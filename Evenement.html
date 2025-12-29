@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actualités & Événements - Famille</title>
+  <style>
+     nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bg-dark text-white text-center py-4">
+    <h1>Actualités & Événements Familiaux</h1>
+   <nav>
+    <a href="#">Accueil</a>
+    <a href="A proos.html">A propos</a>
+    <a href="#">Galerie</a>
+    <a href="#">Arbre généalogique</a>
+    <a href="#">Événements</a>
+    <a href="contact.html.html">Contact</a>
+  </nav>
+  </header>
+
+  <main class="container py-5">
+    <div class="row" id="news-container">
+      <!-- Événements dynamiques ajoutés ici -->
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+   &copy; 2025 Famille [Nom de famille]. Tous droits réservés.
+  </footer>
+
+  <script>
+    const events = [
+      {
+        titre: "Réunion familiale annuelle",
+        date: "20 Janvier 2025",
+        description: "Le mariage de Sarah et Alain, célébré en décembre 2025, fut un événement d'une beauté exceptionnelle. La cérémonie s’est tenue dans un magnifique jardin décoré avec soin, mêlant tradition et modernité. Famille et amis étaient réunis pour célébrer l’union de deux âmes sincèrement amoureuses.Les vœux échangés par les mariés ont touché tout le monde. Les larmes de joie, les danses endiablées, les photos souvenirs, et le repas familial ont fait de cette journée un véritable conte de fée. Ce mariage restera à jamais dans la mémoire de la famille comme un symbole d’un amour vrai, respectueux et béni."
+
+      },
+      {
+        titre: "Anniversaire de Mamie",
+        date: "5 Février 2025",
+        description: "Le 30e anniversaire de Simplice fut un moment plein d’émotion. Entouré de ses proches, il a soufflé ses bougies dans une ambiance festive et remplie d’affection. La soirée a été marquée par de beaux discours, des rires, et une surprise organisée par sa sœur cadette.Cet anniversaire n’était pas juste une fête, c’était une célébration de la vie, du parcours accompli, et des rêves à venir. Ce jour-là, Simplice a rappelé à tous combien la famille est un pilier essentiel dans la réussite personnelle."
+      },
+      {
+        titre: "Mariage de Sarah & Alain",
+        date: "15 Mars 2025",
+        description: "La grande réunion familiale organisée en juillet 2025 restera gravée dans nos cœurs. Ce moment a réuni plusieurs générations autour de valeurs fortes : l'amour, la solidarité et le souvenir de nos racines. Parents, enfants, oncles, tantes, cousins et cousines sont venus de divers coins du pays pour partager des repas, des sourires, des histoires du passé et surtout renforcer les liens qui nous unissent.Des activités ont été organisées : jeux pour les enfants, témoignages des aînés, et une soirée de reconnaissance aux membres qui se sont distingués. Ce fut un grand succès qui a renforcé notre identité familiale."
+      }
+    ];
+
+    const container = document.getElementById('news-container');
+    events.forEach(event => {
+      container.innerHTML += `
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">TITRE</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{les dates}</h6>
+              <p class="card-text">${event.description}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>
